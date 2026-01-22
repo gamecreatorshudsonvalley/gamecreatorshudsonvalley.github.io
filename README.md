@@ -2,7 +2,7 @@
 
 This is a simple landing Page for GCHV
 
-## Live Preview: [click here](https://gchv.github.io/)
+## Live Preview: [click here](https://gamecreatorshudsonvalley.github.io/)
 
 ## Table of Contents
 
