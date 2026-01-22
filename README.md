@@ -1,5 +1,4 @@
 # GCHV-Website
-# Darshan Bajgain Portfolio Website
 
 This is a simple landing Page for GCHV
 
