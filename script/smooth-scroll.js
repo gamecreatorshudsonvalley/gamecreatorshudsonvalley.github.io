@@ -8,8 +8,10 @@
             const targetElement = document.getElementById(targetId);
 
             if (targetElement) {
+                const nav = document.querySelector('nav');
+                const navHeight = nav ? nav.offsetHeight : 0;
                 window.scrollTo({
-                    top: targetElement.offsetTop - document.querySelector('nav').offsetHeight,
+                    top: targetElement.offsetTop - navHeight,
                     behavior: 'smooth'
                 });
             }
