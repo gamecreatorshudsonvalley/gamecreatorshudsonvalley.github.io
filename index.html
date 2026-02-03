@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" href="./assets/GCHV.jpg" type="image/jpeg">
+    <link rel="icon" href="./assets/GCHV.png" type="image/png">
     <title>Game Creators Hudson Valley</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="./custom_css/style.css">
@@ -22,25 +22,25 @@
 
             <div class=" md:w-1/2 flex flex-col items-center">
 
-                <img src="assets/GCHV.jpg" alt="GCHV Logo" class="py-2 rounded-full w-32 md:w-48 lg:w-56 h-32 md:h-48 lg:h-56 object-cover" />
-
+                <img src="assets/GCHV.png" alt="GCHV Logo" class="py-2 rounded-full w-32 md:w-48 lg:w-56 h-auto object-contain transform scale-125" />
 
                 <div class="flex flex-col items-center mx-auto">
 
-                    <h1 class="text-xl font-bold text-gray-100 p-2 text-center">Game Creators Hudson Valley</h1>
+                    <h1 class="text-xl font-bold text-gray-100 p-2 text-center mt-5">Game Creators Hudson Valley</h1>
 
                     <p class="text-base lg:text-lg px-4 mt-2 text-center text-gray-200">
-                        Welcome to Game Developers of Hudson Valley (GDHV), a community for game developers, artists, and enthusiasts located in the scenic Hudson Valley!<br><br>
-                        Our mission is to foster creativity, innovation, and connection among professionals, students, and hobbyists passionate about game development.
-                                            </p>
-
+                        A welcoming Hudson Valley community for game developers, artists, and enthusiasts.
+                        Meet collaborators, learn new skills, and build games together.
+                    </p>
                 </div>
 
 
                 <div class="my-6 flex items-center justify-center space-x-4">
-                    <a href="#email-list"
-                        class="bg-gray-900 px-4 py-2 text-white font-semibold hover:bg-green-500 hover:underline transition duration-300">
-                        Join Our Mailing List!<i class="fa fa-envelope px-2"></i>
+                    <a href="#email-list" class="btn-primary">
+                        Join Our Mailing List<i class="fa fa-envelope px-2"></i>
+                    </a>
+                    <a href="https://discord.gg/xvyVr2BXRs" target="_blank" class="btn-secondary">
+                        Join Discord<i class="fab fa-discord px-2"></i>
                     </a>
                 </div>
 
@@ -50,7 +50,7 @@
             <div class="md:w-1/2 p-4 text-center">
 
                 <div class="mb-6 py-4">
-                    <video width="1920" height="1080" controls>
+                    <video width="1920" height="1080" controls aria-label="Highlight reel from recent events">
                         <source src="assets/video_1.mp4" type="video/mp4">
                         <source src="assets/video_1.webm" type="video/webm">
                         <source src="assets/video_1.ogg" type="video/ogg">
@@ -81,14 +81,44 @@
                             </a>
                         </li>
                     </ul>
+                    <ul class="mt-3 space-y-1 text-gray-200 text-sm lg:text-base text-center">
+                        <li>All skill levels welcome</li>
+                        <li>Students, hobbyists, and professionals</li>
+                        <li>Talks, demos, jams, and networking</li>
+                    </ul>
 
                 </div>
 
             </div>
         </div>
     </section>
+    <div class="section-divider"></div>
+
+    <!-- How it works section -->
+    <section id="how-it-works" class="py-12">
+        <div class="container max-w-screen-lg mx-auto px-4">
+            <h2 class="text-2xl text-center text-gray-100 font-bold mb-6">How It Works</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="info-card">
+                    <h3 class="text-lg font-semibold text-gray-800 mb-2">Join</h3>
+                    <p class="text-gray-600 text-sm">Subscribe to the mailing list or hop into Discord to introduce yourself.</p>
+                </div>
+                <div class="info-card">
+                    <h3 class="text-lg font-semibold text-gray-800 mb-2">Meet</h3>
+                    <p class="text-gray-600 text-sm">Attend meetups, talks, and workshops to learn and connect.</p>
+                </div>
+                <div class="info-card">
+                    <h3 class="text-lg font-semibold text-gray-800 mb-2">Create</h3>
+                    <p class="text-gray-600 text-sm">Showcase your work, find collaborators, and build projects together.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-divider"></div>
+
     <!-- Upcoming Events section-->
-    <section id="projects" class="py-18  ">
+    <section id="upcoming-events" class="py-18  ">
         <div class="container max-w-screen-lg mx-auto ">
             <h2 class="text-2xl text-center text-gray-100 font-bold mb-8">Upcoming Event</h2>
 
@@ -114,6 +144,9 @@
 
     </div>
     </section>
+
+    <div class="section-divider"></div>
+
     <section id="email-list" class="py-18 lg:py-8 mx-auto">
         <div class="container max-w-screen-lg mx-auto text-center">
             <h2 class="text-2xl text-center text-gray-100 font-bold mb-8">Mailing List</h2>
@@ -122,6 +155,8 @@
             </div>
         </div>
     </section>
+
+    <div class="section-divider"></div>
     <!--Past Events section-->
 
     <section id="projects" class="py-16  ">
@@ -129,7 +164,7 @@
             <h2 class="text-2xl text-center text-gray-100 font-bold mb-8">Past Events</h2>
 
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-8">
-                <div class="bg-gray-100 mx-4 rounded-lg overflow-hidden shadow-md transition-transform transform hover:scale-105">
+                <div class="event-card">
                     <a href="https://www.meetup.com/game-creators-hudson-valley/events/310973831/" target="_blank">
                         <img src="assets/pastEvents/fall_2025.jpg" alt="Fall 2025 Event"
                              class="w-full h-44 object-cover" />
@@ -147,7 +182,7 @@
                     </div>
                 </div>
 
-                <div class="bg-gray-100 mx-4 rounded-lg overflow-hidden shadow-md transition-transform transform hover:scale-105">
+                <div class="event-card">
                     <a href="https://www.canva.com/design/DAGvxv2VdAc/_n9w-M7dntwQ7G-PnkDweg/view" target="_blank">
                         <img src="assets/pastEvents/summer_2025.jpg" alt="Summer 2025 Event"
                              class="w-full h-44 object-cover" />
@@ -164,7 +199,7 @@
                             </div>
                         </div>
                 </div>
-            <div class="bg-gray-100 mx-4 rounded-lg overflow-hidden shadow-md transition-transform transform hover:scale-105">
+            <div class="event-card">
                 <a href="https://www.meetup.com/game-creators-hudson-valley/events/306380106/" target="_blank">
                     <img src="assets/pastEvents/spring_2025.jpg" alt="Spring 2025 Event"
                          class="w-full h-44 object-cover" />
@@ -182,7 +217,7 @@
                 </div>
             </div>
 
-            <div class="bg-gray-100 mx-4 rounded-lg overflow-hidden shadow-md transition-transform transform hover:scale-105">
+            <div class="event-card">
                 <a href="https://globalgamejam.org/jam-sites/2025/happy-valley-arcade-bar" target="_blank">
                     <img src="assets/pastEvents/ggj_2025.jpg" alt="Global Game Jam 2025 Event"
                          class="w-full h-44 object-cover" />
@@ -199,7 +234,7 @@
                         </div>
                     </div>
                 </div>
-            <div class="bg-gray-100 mx-4 rounded-lg overflow-hidden shadow-md transition-transform transform hover:scale-105">
+            <div class="event-card">
                 <a href="https://www.meetup.com/game-creators-hudson-valley/events/304325253/" target="_blank">
                     <img src="assets/pastEvents/winter_2024.jpg" alt="Winter 2024 Event"
                          class="w-full h-44 object-cover" />
