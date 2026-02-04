@@ -99,7 +99,6 @@
 
 .event-card {
     background-color: #f3f4f6;
-    margin: 0 16px;
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
@@ -111,22 +110,9 @@
     box-shadow: 0 12px 24px rgba(0, 0, 0, 0.22);
 }
 
-.logo-image {
-    width: 15rem;
-    height: 15rem;
-}
-
-@media (min-width: 768px) {
-    .logo-image {
-        width: 12rem;
-        height: 12rem;
-    }
-}
-
 @media (min-width: 1024px) {
     .logo-image {
-        width: 15rem;
-        height: 15rem;
-        transform: scale(1);
+        transform: scale(1.2);
+        transform-origin: center;
     }
 }
