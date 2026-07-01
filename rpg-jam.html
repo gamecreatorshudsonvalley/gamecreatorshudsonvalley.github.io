@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="./assets/GCHV.png" type="image/png">
+    <meta property="og:title" content="One Page RPG Jam | Game Creators Hudson Valley" />
+    <meta property="og:description" content="GCHV and Mana Potion Tabletop are teaming up to host local and hybrid events for the One Page RPG Jam." />
+    <meta property="og:image" content="https://gchv.github.io/assets/GCHV.png" />
+    <meta property="og:url" content="https://gchv.github.io/rpg-jam.html" />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="One Page RPG Jam | Game Creators Hudson Valley" />
+    <meta name="twitter:description" content="GCHV and Mana Potion Tabletop are teaming up to host local and hybrid events for the One Page RPG Jam." />
+    <meta name="twitter:image" content="https://gchv.github.io/assets/GCHV.png" />
+    <title>One Page RPG Jam | Game Creators Hudson Valley</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="./custom_css/style.css">
+</head>
+
+<body class="bg">
+
+    <!--JS particles bg-->
+    <div id="particles-bg"></div>
+
+    <!-- Site Navigation -->
+    <header class="site-nav">
+        <div class="container max-w-screen-lg mx-auto px-4 py-3 flex items-center justify-between">
+            <a href="index.html" class="flex items-center gap-2 text-gray-100 font-bold">
+                <img src="assets/GCHV.png" alt="GCHV" class="w-8 h-8 rounded-full object-cover" />
+                GCHV
+            </a>
+            <button class="mobile-menu-button md:hidden text-gray-100">
+                <svg class="w-6 h-6" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" viewBox="0 0 24 24" stroke="currentColor"><path d="M4 6h16M4 12h16M4 18h16"></path></svg>
+            </button>
+            <ul class="mobile-menu hidden md:flex items-center gap-6 text-gray-200 font-medium">
+                <li><a href="index.html" class="site-nav-link">Home</a></li>
+                <li><a href="rpg-jam.html" class="site-nav-link active">One Page RPG Jam</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main class="jam-panel">
+
+    <!-- Header -->
+    <section id="jam-hero" class="py-6 mx-auto">
+        <div class="container max-w-screen-lg mx-auto px-4 text-center">
+            <img src="assets/one-page-rpg-eyebrow.jpg" alt="GCHV and Mana Potion Tabletop present the One Page RPG Jam" class="mx-auto mb-4 rounded-lg shadow w-full max-w-xl h-auto object-contain" />
+            <h1 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">One Page RPG Jam 2026</h1>
+            <div class="info-card max-w-2xl mx-auto text-center">
+                <p class="text-gray-700 leading-relaxed mb-4">
+                    <a href="https://www.onepagerpgjam.com/" target="_blank" class="jam-link"><strong>One-Page RPG Jam</strong></a>
+                    is an incredible worldwide maker challenge where participants makes games that fit on one page of paper!
+                </p>
+                <p class="text-gray-700 leading-relaxed mb-4">
+                    This year the jam will run from <strong>July 13 &ndash; August 16</strong>!
+                </p>
+                <p class="text-gray-700 leading-relaxed mb-4">
+                    To help our community take part,
+                    <strong><a href="https://manapotioncoffee.com/mana-potion-tabletop" target="_blank" class="jam-link">Mana Potion Tabletop</a> &amp; Game Creators Hudson Valley</strong>
+                    are teaming up to offer free local
+                </p>
+                <ul class="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-gray-800 font-semibold mb-4">
+                    <li class="flex items-center gap-2"><i class="fa-solid fa-people-group"></i> Team Building</li>
+                    <li class="flex items-center gap-2"><i class="fa-solid fa-calendar-days"></i> Community Events</li>
+                    <li class="flex items-center gap-2"><i class="fa-solid fa-trophy"></i> Prizes</li>
+                </ul>
+                <p class="font-bold text-gray-900 mb-4">Intentionally Beginner Friendly!</p>
+                <p class="text-gray-700 leading-relaxed">
+                    This is a welcoming, low-pressure way to try your hand at game design &mdash; come join us and make something amazing!
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- Calendar -->
+    <section id="jam-calendar" class="py-6">
+        <div class="container max-w-screen-lg mx-auto px-4">
+            <h2 class="text-2xl md:text-3xl text-center text-gray-900 font-bold mb-4">Event Calendar</h2>
+            <p class="text-center text-gray-700 mb-8 max-w-2xl mx-auto">
+                Each event below includes its location, registration link, and virtual join link for hybrid attendance.
+            </p>
+            <div class="event-card p-2 max-w-3xl mx-auto">
+                <!-- TODO: replace src below with your Google Calendar public embed URL
+                     (Google Calendar settings > Integrate calendar > Embed code) -->
+                <iframe
+                    src="https://calendar.google.com/calendar/embed?src=REPLACE_WITH_CALENDAR_ID&ctz=America%2FNew_York"
+                    style="border: 0" width="100%" height="600" frameborder="0" scrolling="no">
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- FAQ -->
+    <section id="jam-faq" class="py-6">
+        <div class="container max-w-screen-lg mx-auto px-4">
+            <h2 class="text-2xl md:text-3xl text-center text-gray-900 font-bold mb-8">FAQ</h2>
+            <div class="max-w-2xl mx-auto">
+                <details class="faq-item">
+                    <summary>What is the One Page RPG Jam?</summary>
+                    <p>A game jam where designers create a complete tabletop RPG that fits on a single page. Learn more on the <a href="https://www.onepagerpgjam.com/" target="_blank" class="jam-link hover:underline">official jam site</a>.</p>
+                </details>
+                <details class="faq-item">
+                    <summary>What's the prize?</summary>
+                    <p>This jam is unranked and unjudged. All participants who submit a game will recieve a dice set from Mana Potion Tabletop. One prize per participant.</p>
+                </details>
+                <details class="faq-item">
+                    <summary>Do I need tabletop RPG design experience to join?</summary>
+                    <p>No &mdash; all skill levels are welcome, from first-timers to experienced designers.</p>
+                </details>
+                <details class="faq-item">
+                    <summary>Is there a cost to attend?</summary>
+                    <!-- TODO: confirm cost -->
+                    <p>Everything is free!</p>
+                </details>
+                <details class="faq-item">
+                    <summary>Can I join remotely?</summary>
+                    <p>Yes, these are hybrid events. Each calendar listing includes a virtual join link alongside the in-person location.</p>
+                </details>
+                <details class="faq-item">
+                    <summary>Where will events be held?</summary>
+                    <!-- TODO: confirm venue details -->
+                    <p>In-person sessions are hosted at Mana Potion Tabletop. Exact addresses are listed on each event in the calendar above.</p>
+                </details>
+                <details class="faq-item">
+                    <summary>What should I bring?</summary>
+                    <p>Just yourself and any notes or ideas you're working on &mdash; paper and pens will be available on site.</p>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    </main>
+
+    <!--JS files-->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tsparticles/2.12.0/tsparticles.bundle.min.js"></script>
+    <script src="script/particles.js"></script>
+
+    <script src="https://kit.fontawesome.com/8022519056.js" crossorigin="anonymous"></script>
+    <script src="script/navbar.js"></script>
+    <script src="script/smooth-scroll.js"></script>
+
+</body>
+
+</html>
