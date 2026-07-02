@@ -188,6 +188,17 @@
     color: #96691c;
 }
 
+.jam-date-badge {
+    display: inline-block;
+    background-color: #b8862c;
+    color: #ffffff;
+    font-weight: 600;
+    padding: 3px 12px;
+    border-radius: 9999px;
+    font-size: 0.8rem;
+    white-space: nowrap;
+}
+
 .faq-item {
     background-color: #f3f4f6;
     border-radius: 8px;
