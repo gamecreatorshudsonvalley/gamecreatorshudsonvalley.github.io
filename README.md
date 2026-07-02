@@ -1,6 +1,6 @@
 # GCHV-Website
 
-This is a simple landing Page for GCHV
+This is the landing page for GCHV, including a dedicated page for the One Page RPG Jam.
 
 ## Live Preview: [click here](https://gamecreatorshudsonvalley.github.io/)
 
