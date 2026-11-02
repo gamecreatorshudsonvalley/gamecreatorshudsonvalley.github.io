@@ -6,6 +6,12 @@
       "runtimeExecutable": "python",
       "runtimeArgs": ["-m", "http.server", "4173"],
       "port": 4173
+    },
+    {
+      "name": "static-server-node",
+      "runtimeExecutable": "node",
+      "runtimeArgs": ["-e", "const h=require('http'),f=require('fs'),p=require('path'),r=process.cwd(),t={'.html':'text/html','.js':'text/javascript','.css':'text/css','.png':'image/png','.jpg':'image/jpeg','.svg':'image/svg+xml'};h.createServer((q,s)=>{let u=decodeURIComponent(q.url.split('?')[0]);if(u.endsWith('/'))u+='index.html';const x=p.join(r,u);if(!x.startsWith(r)){s.writeHead(403);return s.end()}f.readFile(x,(e,d)=>{if(e){s.writeHead(404);return s.end('404')}s.writeHead(200,{'Content-Type':(t[p.extname(x)]||'application/octet-stream')+'; charset=utf-8','Cache-Control':'no-store'});s.end(d)})}).listen(4174)"],
+      "port": 4174
     }
   ]
 }
