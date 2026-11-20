@@ -106,23 +106,6 @@
     return cells.join("");
   }
 
-  function renderCommunity() {
-    var icons = { questions: "help", mentors: "mentor", resources: "folder", teams: "team", chat: "chat" };
-    return D.community.features.map(function (f) {
-      return '<li class="md-feature"><span class="md-feature__icon">' + icon(icons[f.id] || "check", 22) + "</span>" +
-        '<div><h3 class="md-feature__title">' + esc(f.title) + "</h3><p>" + esc(f.text) + "</p></div></li>";
-    }).join("");
-  }
-
-  function renderMentors() {
-    if (!D.mentors || !D.mentors.length) return "";
-    return '<h3 class="md-h3 md-mentors__title">Mentors</h3><ul class="md-mentors">' + D.mentors.map(function (m) {
-      var name = G.safeUrl(m.url) ? G.link(m.url, m.name) : esc(m.name);
-      return "<li><strong>" + name + "</strong><span>" +
-        esc([m.role, m.org].filter(Boolean).join(" · ")) + "</span></li>";
-    }).join("") + "</ul>";
-  }
-
   // Partner/sponsor card. Uses the approved logo when configured; otherwise a
   // clean text wordmark placeholder, never a recreated logo.
   function orgCard(p, cls, sub) {
@@ -254,18 +237,9 @@
     G.bind(document);
     renderHeadline();
 
-    var js = G.parseDate(D.event.dates.jamStart), je = G.parseDate(D.event.dates.jamEnd);
-    fill("md-jam-days", js.day + "–" + je.day);
-    fill("md-jam-month", esc(js.month + " " + js.year));
-
     fill("md-compare", renderCompare());
     fill("md-journey", renderJourney());
     fill("md-week", renderWeek());
-    fill("md-community", renderCommunity());
-    fill("md-mentors", renderMentors());
-    fill("md-jam-points", D.globalGameJam.points.map(function (p) {
-      return "<li>" + icon("check", 20) + "<span>" + esc(p) + "</span></li>";
-    }).join(""));
     fill("md-schedule", renderHourGrid());
     fill("md-audiences", D.getInvolved.audiences.map(function (a) { return "<li>" + esc(a) + "</li>"; }).join(""));
     fill("md-partners", G.presentingPartners().map(function (p) { return orgCard(p, "md-partner"); }).join(""));
@@ -279,9 +253,6 @@
     fill("md-faq-contact", c.isFallback ? "Ask us " + G.link(c.href, "on Discord") + "." : G.link(c.href, "Contact us") + ".");
     fill("md-footer-partners", "Presented by " + D.presentingPartners.map(function (p) { return esc(p.name); })
       .join(", ").replace(/, ([^,]*)$/, ", and $1") + ".");
-    fill("md-channel-note", G.safeUrl(D.links.discordGgjChannel)
-      ? G.link(D.links.discordGgjChannel, "Visit the Global Game Jam 2027 channel")
-      : "A dedicated Global Game Jam 2027 channel is coming soon.");
 
     document.querySelectorAll("[data-icon]").forEach(function (el) {
       el.innerHTML = icon(el.getAttribute("data-icon"), el.classList.contains("md-ai__icon") ? 28 : 22);

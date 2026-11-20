@@ -45,7 +45,6 @@
                     <li><a href="#about">About</a></li>
                     <li><a href="#workshops">Workshops</a></li>
                     <li><a href="#jam">Game Jam</a></li>
-                    <li><a href="#schedule">Schedule</a></li>
                     <li><a href="#faq">FAQ</a></li>
                     <li><a href="index.html">GCHV Home</a></li>
                 </ul>
@@ -132,7 +131,7 @@
                         </a>
                     </li>
                     <li>
-                        <a class="md-fact md-fact--link" href="#schedule">
+                        <a class="md-fact md-fact--link" href="#jam">
                             <span class="md-fact__icon md-fact__icon--teal" data-icon="gamepad" aria-hidden="true"></span>
                             <span class="md-fact__text">
                                 <span class="md-fact__label">Global Game Jam</span>
@@ -187,7 +186,7 @@
         </section>
 
         <!-- 4. WORKSHOPS -->
-        <section id="workshops" class="md-section" aria-labelledby="workshops-title">
+        <section id="workshops" class="md-section md-section--joined" aria-labelledby="workshops-title">
             <div class="md-container">
                 <div class="md-section-head md-section-head--split">
                     <div>
@@ -200,45 +199,15 @@
             </div>
         </section>
 
-        <!-- 6. GLOBAL GAME JAM -->
+        <!-- 6. GLOBAL GAME JAM: weekend schedule -->
         <section id="jam" class="md-jam" aria-labelledby="jam-title">
-            <div class="md-container md-jam__grid">
-                <div class="md-jam__date" aria-hidden="true">
-                    <span class="md-jam__days" id="md-jam-days"></span>
-                    <span class="md-jam__month" id="md-jam-month"></span>
-                </div>
-                <div>
-                    <p class="md-label md-label--light">The main event</p>
-                    <h2 id="jam-title" class="md-h2 md-h2--light">Global Game Jam <span data-ggj-text="computed.year"></span></h2>
-                    <p class="md-jam__where"><span data-ggj-text="computed.jamRange"></span> &middot; <span data-ggj-text="computed.location"></span></p>
-                    <p data-ggj-text="globalGameJam.summary"></p>
-                    <ul class="md-jam__points" id="md-jam-points"></ul>
-                    <div class="md-hero__ctas">
-                        <a data-ggj-href="computed.jamRegistration" class="md-btn md-btn--yellow" data-ggj-text="computed.jamRegistrationLabel"></a>
-                        <a data-ggj-href="links.globalGameJam" class="md-btn md-btn--ghost-light">About Global Game Jam</a>
-                    </div>
-                </div>
-            </div>
-            <div class="md-container md-schedule" id="schedule">
-                <h3 class="md-schedule__title" id="schedule-title">Weekend Schedule</h3>
-                <div class="md-hours" id="md-schedule" role="region" aria-labelledby="schedule-title" tabindex="0"></div>
-            </div>
-        </section>
-
-        <!-- 7. MENTORSHIP & COMMUNITY -->
-        <section id="community" class="md-section md-section--tint" aria-labelledby="community-title">
-            <div class="md-container md-community">
-                <div class="md-discord">
-                    <span class="md-discord__icon" data-icon="chat" aria-hidden="true"></span>
-                    <p class="md-label md-label--light">Community</p>
-                    <h2 id="community-title" class="md-h2 md-h2--light">Mentorship &amp; Community</h2>
-                    <p data-ggj-text="community.summary"></p>
-                    <p id="md-channel-note" class="md-discord__note"></p>
-                    <a data-ggj-href="links.discord" class="md-btn md-btn--light">Join Our Discord</a>
-                </div>
-                <div>
-                    <ul class="md-features" id="md-community" aria-label="What you can do on Discord"></ul>
-                    <div id="md-mentors"></div>
+            <div class="md-container md-schedule">
+                <p class="md-label md-label--light">Global Game Jam &middot; <span data-ggj-text="computed.jamRange"></span></p>
+                <h2 id="jam-title" class="md-h2 md-h2--light">Weekend Schedule</h2>
+                <div class="md-hours" id="md-schedule" role="region" aria-labelledby="jam-title" tabindex="0"></div>
+                <div class="md-hero__ctas md-schedule__ctas">
+                    <a data-ggj-href="computed.jamRegistration" class="md-btn md-btn--yellow" data-ggj-text="computed.jamRegistrationLabel"></a>
+                    <a data-ggj-href="links.globalGameJam" class="md-btn md-btn--ghost-light">About Global Game Jam</a>
                 </div>
             </div>
         </section>

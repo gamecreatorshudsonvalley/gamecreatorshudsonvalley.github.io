@@ -265,38 +265,11 @@ window.GGJ2027_DATA = {
   ],
 
   /* ------------------------------------------------------------------
-   * Mentors (optional roster, rendered only when non-empty)
-   * { name, role, org, url }
-   * ------------------------------------------------------------------ */
-  mentors: [],
-
-  /* ------------------------------------------------------------------
-   * Community (Discord)
-   * ------------------------------------------------------------------ */
-  community: {
-    summary: "The GCHV Discord is our community hub before, during, and after the jam. We're setting up a dedicated space for Global Game Jam 2027.",
-    features: [
-      { id: "questions", title: "Ask workshop questions", text: "Get unstuck between sessions." },
-      { id: "mentors", title: "Instructor follow-up and mentorship", text: "Instructors will be available to answer questions." },
-      { id: "resources", title: "Resources and recordings", text: "Find shared materials and session recordings." },
-      { id: "teams", title: "Find teammates", text: "Meet people to build with before the jam." },
-      { id: "chat", title: "Community discussion", text: "Chat with local creators before and during the jam." }
-    ]
-  },
-
-  /* ------------------------------------------------------------------
    * Global Game Jam
    * ------------------------------------------------------------------ */
   globalGameJam: {
-    summary: "Global Game Jam is a worldwide event where people make games together over a weekend. Our site at Mount Saint Mary College welcomes game developers of all experience levels.",
     // Label for the jam block in the workshop week strip.
-    weekLabel: "Make a game with your team",
-    points: [
-      "All experience levels welcome",
-      "You don't need to arrive with a team",
-      "We'll help beginners connect with experienced developers",
-      "Free to participate"
-    ]
+    weekLabel: "Make a game with your team"
   },
 
   /* ------------------------------------------------------------------

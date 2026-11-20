@@ -106,7 +106,6 @@
 .md-h1,
 .md-h2,
 .md-h3,
-.md-jam__days,
 .md-week__day,
 .md-footer__title {
   font-family: var(--md-display);
@@ -610,6 +609,11 @@
   padding: 80px 0;
 }
 
+/* Section that flows straight into the next one (Workshops into the weekend schedule) */
+.md-section--joined {
+  padding-bottom: 64px;
+}
+
 .md-section--tint {
   background: var(--md-tint);
 }
@@ -946,172 +950,15 @@
   color: var(--md-yellow) !important;
 }
 
-/* ---------------- Community ---------------- */
-
-.md-community {
-  display: grid;
-  grid-template-columns: 0.9fr 1.1fr;
-  gap: 48px;
-  align-items: start;
-}
-
-.md-discord {
-  position: relative;
-  padding: 40px;
-  color: #e8e6ff;
-  background:
-    radial-gradient(300px 200px at 100% 0%, rgba(253, 112, 4, 0.45), transparent 70%),
-    var(--md-ink);
-  border-radius: 28px;
-  overflow: hidden;
-}
-
-.md-discord p {
-  margin-bottom: 16px;
-}
-
-.md-discord__icon {
-  display: grid;
-  place-items: center;
-  width: 56px;
-  height: 56px;
-  margin-bottom: 24px;
-  color: var(--md-ink);
-  background: var(--md-yellow);
-  border-radius: 16px;
-}
-
-.md-discord__note {
-  font-size: 0.95rem;
-  color: #c9cbe0;
-}
-
-.md-discord__note a {
-  color: #fff;
-}
-
-.md-features {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 16px;
-}
-
-.md-feature {
-  display: flex;
-  gap: 14px;
-  padding: 22px;
-  background: #fff;
-  border-radius: var(--md-radius-sm);
-  box-shadow: var(--md-shadow);
-}
-
-.md-feature:last-child:nth-child(odd) {
-  grid-column: span 2;
-}
-
-.md-feature__icon {
-  display: grid;
-  place-items: center;
-  flex: none;
-  width: 44px;
-  height: 44px;
-  color: var(--md-purple);
-  background: var(--md-purple-soft);
-  border-radius: 12px;
-}
-
-.md-feature__title {
-  font-size: 1rem;
-  font-weight: 700;
-  line-height: 1.35;
-  margin-bottom: 2px;
-}
-
-.md-feature p {
-  font-size: 0.95rem;
-  color: var(--md-muted);
-}
-
-.md-mentors__title {
-  margin-top: 32px;
-}
-
-.md-mentors li {
-  display: flex;
-  flex-direction: column;
-  padding: 12px 0;
-  border-bottom: 1px solid var(--md-line);
-}
-
 /* ---------------- Global Game Jam ---------------- */
 
 .md-jam {
-  padding: 112px 0;
+  padding: 64px 0 80px;
   color: #e8e6ff;
   background:
     radial-gradient(700px 400px at 0% 0%, rgba(91, 53, 213, 0.55), transparent 60%),
     radial-gradient(500px 360px at 100% 100%, rgba(253, 112, 4, 0.4), transparent 60%),
     #171938;
-}
-
-.md-jam__grid {
-  display: grid;
-  grid-template-columns: 0.8fr 1.2fr;
-  gap: 64px;
-  align-items: center;
-}
-
-.md-jam__date {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-}
-
-.md-jam__days {
-  font-size: clamp(5rem, 13vw, 10rem);
-  line-height: 0.9;
-  color: #fff;
-  background: linear-gradient(120deg, #fff 30%, var(--md-yellow));
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.md-jam__month {
-  margin-top: 12px;
-  font-size: 1.4rem;
-  font-weight: 700;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-  color: var(--md-yellow);
-}
-
-.md-jam__where {
-  font-size: 1.15rem;
-  font-weight: 600;
-  color: #fff;
-  margin-bottom: 12px;
-}
-
-.md-jam__points {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 12px 24px;
-  margin: 28px 0 36px;
-}
-
-.md-jam__points li {
-  display: flex;
-  gap: 10px;
-  align-items: flex-start;
-  font-weight: 500;
-  color: #fff;
-}
-
-.md-jam__points svg {
-  flex: none;
-  margin-top: 3px;
-  color: var(--md-yellow);
 }
 
 .md-jam a:not(.md-btn) {
@@ -1120,18 +967,8 @@
 
 /* Jam weekend schedule: compact hour grid on the dark jam band */
 
-.md-schedule {
-  margin-top: 72px;
-  scroll-margin-top: 88px;
-}
-
-.md-schedule__title {
-  font-family: var(--md-display);
-  font-size: clamp(1.5rem, 2.6vw, 2rem);
-  font-weight: 800;
-  letter-spacing: -0.02em;
-  color: #fff;
-  margin-bottom: 24px;
+.md-schedule__ctas {
+  margin-top: 28px;
 }
 
 .md-hours {
@@ -1286,10 +1123,6 @@
 }
 
 @media (max-width: 900px) {
-  .md-schedule {
-    margin-top: 48px;
-  }
-
   .md-week {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -1650,8 +1483,6 @@ a.md-sponsor:hover {
 @media (max-width: 900px) {
   .md-hero__grid,
   .md-about,
-  .md-community,
-  .md-jam__grid,
   .md-involved,
   .md-faq,
   .md-section-head--split {
@@ -1703,12 +1534,6 @@ a.md-sponsor:hover {
     justify-content: flex-start;
   }
 
-  .md-jam__date {
-    flex-direction: row;
-    align-items: baseline;
-    gap: 16px;
-    flex-wrap: wrap;
-  }
 }
 
 @media (max-width: 640px) {
@@ -1723,6 +1548,14 @@ a.md-sponsor:hover {
   .md-section,
   .md-jam {
     padding: 72px 0;
+  }
+
+  .md-section--joined {
+    padding-bottom: 48px;
+  }
+
+  .md-jam {
+    padding-top: 48px;
   }
 
   .md-section--compact {
@@ -1742,15 +1575,9 @@ a.md-sponsor:hover {
   }
 
   .md-facts,
-  .md-features,
   .md-partners,
-  .md-sponsors,
-  .md-jam__points {
+  .md-sponsors {
     grid-template-columns: 1fr;
-  }
-
-  .md-feature:last-child:nth-child(odd) {
-    grid-column: auto;
   }
 
   .md-step {
@@ -1786,7 +1613,6 @@ a.md-sponsor:hover {
     margin-bottom: 8px;
   }
 
-  .md-discord,
   .md-involved {
     padding: 32px 24px;
     border-radius: 24px;
