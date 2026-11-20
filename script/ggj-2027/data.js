@@ -239,7 +239,7 @@ window.GGJ2027_DATA = {
         { time: "17:00", title: "Doors Open / Check-In"},
         { time: "18:00", title: "Orientation & Team Formation" },
         { time: "19:00", title: "Keynote, Theme Reveal", highlight: true },
-        { time: "22:00", title: "Doors Close"}
+        { time: "21:00", title: "Doors Close"}
       ]
     },
     {
@@ -247,7 +247,7 @@ window.GGJ2027_DATA = {
       events: [
         { time: "09:00", title: "Doors Open"},
         { time: "09:00", title: "Jam All Day", allDay: true },
-        { time: "22:00", title: "Doors Close"}
+        { time: "21:00", title: "Doors Close"}
       ]
     },
     {
