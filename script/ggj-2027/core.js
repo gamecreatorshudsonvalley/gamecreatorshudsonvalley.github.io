@@ -362,6 +362,7 @@
     parseDate: parseDate,
     formatDate: formatDate,
     formatRange: formatRange,
+    formatTime: formatTime,
     discordLink: discordLink,
     contactLink: contactLink,
     involvedLink: involvedLink,
