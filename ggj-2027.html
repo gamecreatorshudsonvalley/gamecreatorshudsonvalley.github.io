@@ -42,9 +42,10 @@
             </button>
             <nav class="md-nav" id="md-menu" aria-label="Page">
                 <ul>
-                    <li><a href="#journey">How it works</a></li>
+                    <li><a href="#about">About</a></li>
                     <li><a href="#workshops">Workshops</a></li>
                     <li><a href="#jam">Game Jam</a></li>
+                    <li><a href="#schedule">Schedule</a></li>
                     <li><a href="#faq">FAQ</a></li>
                     <li><a href="index.html">GCHV Home</a></li>
                 </ul>
@@ -119,24 +120,37 @@
 
             <!-- Key dates -->
             <div class="md-container">
-                <dl class="md-facts">
-                    <div class="md-fact">
-                        <span class="md-fact__icon md-fact__icon--purple" data-icon="calendar" aria-hidden="true"></span>
-                        <div><dt>Jumpstart Workshops</dt><dd data-ggj-text="computed.workshopRange"></dd></div>
-                    </div>
-                    <div class="md-fact">
-                        <span class="md-fact__icon md-fact__icon--coral" data-icon="flag" aria-hidden="true"></span>
-                        <div><dt>Game Jam Kickoff</dt><dd data-ggj-text="computed.kickoff"></dd></div>
-                    </div>
-                    <div class="md-fact">
-                        <span class="md-fact__icon md-fact__icon--teal" data-icon="gamepad" aria-hidden="true"></span>
-                        <div><dt>Global Game Jam</dt><dd data-ggj-text="computed.jamRange"></dd></div>
-                    </div>
-                    <div class="md-fact">
-                        <span class="md-fact__icon md-fact__icon--yellow" data-icon="pin" aria-hidden="true"></span>
-                        <div><dt>Location</dt><dd data-ggj-text="computed.location"></dd></div>
-                    </div>
-                </dl>
+                <ul class="md-facts" aria-label="Key dates and location">
+                    <li>
+                        <a class="md-fact md-fact--link" href="#workshops">
+                            <span class="md-fact__icon md-fact__icon--purple" data-icon="calendar" aria-hidden="true"></span>
+                            <span class="md-fact__text">
+                                <span class="md-fact__label">Jumpstart Workshops</span>
+                                <span class="md-fact__value" data-ggj-text="computed.workshopRange"></span>
+                                <span class="md-fact__more">See the week <span aria-hidden="true">&rarr;</span></span>
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="md-fact md-fact--link" href="#schedule">
+                            <span class="md-fact__icon md-fact__icon--teal" data-icon="gamepad" aria-hidden="true"></span>
+                            <span class="md-fact__text">
+                                <span class="md-fact__label">Global Game Jam</span>
+                                <span class="md-fact__value" data-ggj-text="computed.jamRange"></span>
+                                <span class="md-fact__more">See the schedule <span aria-hidden="true">&rarr;</span></span>
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <div class="md-fact">
+                            <span class="md-fact__icon md-fact__icon--yellow" data-icon="pin" aria-hidden="true"></span>
+                            <span class="md-fact__text">
+                                <span class="md-fact__label">Location</span>
+                                <span class="md-fact__value" data-ggj-text="computed.location"></span>
+                            </span>
+                        </div>
+                    </li>
+                </ul>
             </div>
         </section>
 
@@ -182,29 +196,11 @@
                     </div>
                     <p class="md-body-lg">One beginner workshop each day, Monday through Thursday. Each one stands alone, so join as many as you like.</p>
                 </div>
-                <div class="md-sessions" id="md-sessions"></div>
+                <ol class="md-week" id="md-week" aria-label="Workshop week at a glance"></ol>
             </div>
         </section>
 
-        <!-- 6. MENTORSHIP & COMMUNITY -->
-        <section id="community" class="md-section md-section--tint" aria-labelledby="community-title">
-            <div class="md-container md-community">
-                <div class="md-discord">
-                    <span class="md-discord__icon" data-icon="chat" aria-hidden="true"></span>
-                    <p class="md-label md-label--light">Community</p>
-                    <h2 id="community-title" class="md-h2 md-h2--light">Mentorship &amp; Community</h2>
-                    <p data-ggj-text="community.summary"></p>
-                    <p id="md-channel-note" class="md-discord__note"></p>
-                    <a data-ggj-href="links.discord" class="md-btn md-btn--light">Join Our Discord</a>
-                </div>
-                <div>
-                    <ul class="md-features" id="md-community" aria-label="What you can do on Discord"></ul>
-                    <div id="md-mentors"></div>
-                </div>
-            </div>
-        </section>
-
-        <!-- 7. GLOBAL GAME JAM -->
+        <!-- 6. GLOBAL GAME JAM -->
         <section id="jam" class="md-jam" aria-labelledby="jam-title">
             <div class="md-container md-jam__grid">
                 <div class="md-jam__date" aria-hidden="true">
@@ -221,6 +217,28 @@
                         <a data-ggj-href="computed.jamRegistration" class="md-btn md-btn--yellow" data-ggj-text="computed.jamRegistrationLabel"></a>
                         <a data-ggj-href="links.globalGameJam" class="md-btn md-btn--ghost-light">About Global Game Jam</a>
                     </div>
+                </div>
+            </div>
+            <div class="md-container md-schedule" id="schedule">
+                <h3 class="md-schedule__title" id="schedule-title">Weekend Schedule</h3>
+                <div class="md-hours" id="md-schedule" role="region" aria-labelledby="schedule-title" tabindex="0"></div>
+            </div>
+        </section>
+
+        <!-- 7. MENTORSHIP & COMMUNITY -->
+        <section id="community" class="md-section md-section--tint" aria-labelledby="community-title">
+            <div class="md-container md-community">
+                <div class="md-discord">
+                    <span class="md-discord__icon" data-icon="chat" aria-hidden="true"></span>
+                    <p class="md-label md-label--light">Community</p>
+                    <h2 id="community-title" class="md-h2 md-h2--light">Mentorship &amp; Community</h2>
+                    <p data-ggj-text="community.summary"></p>
+                    <p id="md-channel-note" class="md-discord__note"></p>
+                    <a data-ggj-href="links.discord" class="md-btn md-btn--light">Join Our Discord</a>
+                </div>
+                <div>
+                    <ul class="md-features" id="md-community" aria-label="What you can do on Discord"></ul>
+                    <div id="md-mentors"></div>
                 </div>
             </div>
         </section>

@@ -222,12 +222,47 @@ window.GGJ2027_DATA = {
     }
   ],
 
-  // Friday is not a workshop day.
-  kickoffDay: {
-    date: "2027-01-29",
-    title: "Team Formation, Orientation & Game Jam Kickoff",
-    description: "No team? No problem. We'll help you meet teammates, get oriented, and start the jam together."
-  },
+  /* ------------------------------------------------------------------
+   * Jam weekend schedule (rendered in the Global Game Jam section)
+   * ------------------------------------------------------------------
+   * Times use 24h "HH:MM" local time (America/New_York).
+   * A null time renders as "TBA". Keep events in time order.
+   * The first and last event of each day set the shaded "venue open"
+   * block, so start each day with Doors Open and end it with Doors Close.
+   * highlight: true shows the event as a yellow pill (key moments).
+   * allDay: true centers the event inside the venue block.
+   * ------------------------------------------------------------------ */
+  jamSchedule: [
+    {
+      date: "2027-01-29",
+      events: [
+        { time: "17:00", title: "Doors Open / Check-In"},
+        { time: "18:00", title: "Orientation & Team Formation" },
+        { time: "19:00", title: "Keynote, Theme Reveal", highlight: true },
+        { time: "22:00", title: "Doors Close"}
+      ]
+    },
+    {
+      date: "2027-01-30",
+      events: [
+        { time: "09:00", title: "Doors Open"},
+        { time: "09:00", title: "Jam All Day", allDay: true },
+        { time: "22:00", title: "Doors Close"}
+      ]
+    },
+    {
+      date: "2027-01-31",
+      events: [
+        // TODO: confirm Sunday doors-open time.
+        { time: "09:00", title: "Doors  Open"},
+        { time: "12:00", title: "Submission Deadline", highlight: true },
+        { time: "12:30", title: "Presentations Start" },
+        { time: "14:00", title: "Prize Announcements" },
+        { time: "14:30", title: "Closeout" },
+        { time: "15:00", title: "Doors Close"}
+      ]
+    }
+  ],
 
   /* ------------------------------------------------------------------
    * Mentors (optional roster, rendered only when non-empty)
@@ -254,6 +289,8 @@ window.GGJ2027_DATA = {
    * ------------------------------------------------------------------ */
   globalGameJam: {
     summary: "Global Game Jam is a worldwide event where people make games together over a weekend. Our site at Mount Saint Mary College welcomes game developers of all experience levels.",
+    // Label for the jam block in the workshop week strip.
+    weekLabel: "Make a game with your team",
     points: [
       "All experience levels welcome",
       "You don't need to arrive with a team",
